@@ -76,10 +76,10 @@ namespace MarsOnBoardingTask.SpecFlow.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adding of the Seller Profile Education with records")]
+        [NUnit.Framework.DescriptionAttribute("1. Adding of the Seller Profile Education with invalid records")]
         [NUnit.Framework.CategoryAttribute("addEducation1")]
-        [NUnit.Framework.TestCaseAttribute("Singapore", "NUS", "B.Sc", "Software-Testing", "2020", "Education has been added", null)]
-        public virtual void AddingOfTheSellerProfileEducationWithRecords(string country, string university, string title, string degree, string graduationYear, string message, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "", "", "2020", "Please enter all the fields", null)]
+        public virtual void _1_AddingOfTheSellerProfileEducationWithInvalidRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "addEducation1"};
@@ -89,13 +89,13 @@ namespace MarsOnBoardingTask.SpecFlow.Feature
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Country", country);
-            argumentsOfScenario.Add("University", university);
+            argumentsOfScenario.Add("UniversityName", universityName);
+            argumentsOfScenario.Add("CountryUniversity", countryUniversity);
             argumentsOfScenario.Add("Title", title);
             argumentsOfScenario.Add("Degree", degree);
             argumentsOfScenario.Add("GraduationYear", graduationYear);
             argumentsOfScenario.Add("Message", message);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding of the Seller Profile Education with records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Adding of the Seller Profile Education with invalid records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -117,30 +117,29 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
- testRunner.Given("I login to the Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I login to the Trade Skills portal for education successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.And("I click on the \"Add New\" button under \"Education\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I navigate to the skiils page under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
- testRunner.When(string.Format("I enter the data in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' and click on Add button", country, university, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click on the Add New button under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then(string.Format("The display popup message \'{0}\' will appear", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("I enter the records for \'{0}\', \'{1}\', \'{2}\' and click on Add button", universityName, countryUniversity, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.And(string.Format("The new row should be updated as \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' successfully", country, university, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then(string.Format("The display error popup message \'{0}\' come out", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adding of the Seller Profile Education with invalid records")]
+        [NUnit.Framework.DescriptionAttribute("2. Adding of the Seller Profile Education with records")]
         [NUnit.Framework.CategoryAttribute("addEducation2")]
-        [NUnit.Framework.TestCaseAttribute("", "", "", "", "", "Please enter all the fields", null)]
-        [NUnit.Framework.TestCaseAttribute("Singapore", "NUS", "", "", "2020", "Please enter all the fields", null)]
-        public virtual void AddingOfTheSellerProfileEducationWithInvalidRecords(string country, string university, string title, string degree, string graduationYear, string message, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "B.Sc", "Software-Testing", "2020", "Education has been added", null)]
+        public virtual void _2_AddingOfTheSellerProfileEducationWithRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "addEducation2"};
@@ -150,13 +149,13 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Country", country);
-            argumentsOfScenario.Add("University", university);
+            argumentsOfScenario.Add("UniversityName", universityName);
+            argumentsOfScenario.Add("CountryUniversity", countryUniversity);
             argumentsOfScenario.Add("Title", title);
             argumentsOfScenario.Add("Degree", degree);
-            argumentsOfScenario.Add("Graduation Year", graduationYear);
+            argumentsOfScenario.Add("GraduationYear", graduationYear);
             argumentsOfScenario.Add("Message", message);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding of the Seller Profile Education with invalid records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Adding of the Seller Profile Education with records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -178,32 +177,33 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("I login to the Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I login to the Trade Skills portal for education successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
- testRunner.And("I click on the \"Add New\" button under \"Education\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I navigate to the skiils page under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
- testRunner.When(string.Format("I enter the data in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'<GraduationYear>\' and click on A" +
-                            "dd button", country, university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click on Add New button under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
- testRunner.Then(string.Format("The display error popup message \'{0}\' will appear", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("I enter the records as \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' and click on Add button", universityName, countryUniversity, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 25
- testRunner.And(string.Format("The new row should be not updated as \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'<GraduationYear" +
-                            ">\' successfully", country, university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then(string.Format("The display popup message \'{0}\' will come out", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 26
+ testRunner.And(string.Format("The new row should be added for \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' successfully", universityName, countryUniversity, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adding of the Seller Profile Education with duplicate records")]
+        [NUnit.Framework.DescriptionAttribute("3. Adding of the Seller Profile Education with duplicate records")]
         [NUnit.Framework.CategoryAttribute("addEducation3")]
-        [NUnit.Framework.TestCaseAttribute("Japanese", "Tokyo Uni", "Associate", "Computer Science", "2020", "2020", "This information is already exist.", null)]
-        [NUnit.Framework.TestCaseAttribute("Japanese", "Tokyo Uni", "Associate", "Computer Science", "2020", "2021", "Duplicated data", null)]
-        public virtual void AddingOfTheSellerProfileEducationWithDuplicateRecords(string country, string university, string title, string degree, string graduationYear, string secondGraduationYear, string message, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "B.Sc", "Software-Testing", "2020", "2020", "This information is already exist.", null)]
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "B.Sc", "Software-Testing", "2020", "2021", "Duplicated data", null)]
+        public virtual void _3_AddingOfTheSellerProfileEducationWithDuplicateRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string secondGraduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "addEducation3"};
@@ -213,14 +213,14 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Country", country);
-            argumentsOfScenario.Add("University", university);
+            argumentsOfScenario.Add("UniversityName", universityName);
+            argumentsOfScenario.Add("CountryUniversity", countryUniversity);
             argumentsOfScenario.Add("Title", title);
             argumentsOfScenario.Add("Degree", degree);
-            argumentsOfScenario.Add("Graduation Year", graduationYear);
-            argumentsOfScenario.Add("Second Graduation Year", secondGraduationYear);
+            argumentsOfScenario.Add("GraduationYear", graduationYear);
+            argumentsOfScenario.Add("SecondGraduationYear", secondGraduationYear);
             argumentsOfScenario.Add("Message", message);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding of the Seller Profile Education with duplicate records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Adding of the Seller Profile Education with duplicate records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -242,38 +242,35 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 34
- testRunner.Given("I login to the Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I login to the Trade Skills portal for education successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 35
- testRunner.And("I click on the \"Add New\" button under \"Education\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I navigate to the skiils page under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
- testRunner.When(string.Format("I enter the data in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'<GraduationYear>\' and click on A" +
-                            "dd button", country, university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click on Add New button under Education section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
- testRunner.And("I click on the \"Add New\" button under \"Education\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When(string.Format("I enter the details of \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' and click on Add button", universityName, countryUniversity, title, degree, secondGraduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 38
- testRunner.And(string.Format("I enter the data in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'<GraduationYear>\'and click on Ad" +
-                            "d button", country, university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("The display error popup message \'{0}\' will be come out", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 39
- testRunner.Then(string.Format("The display error popup message \'{0}\' will appear", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And(string.Format("I enter the data in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\'and click on Add button", universityName, countryUniversity, title, degree, secondGraduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 40
- testRunner.And(string.Format("The new row should be not updated as \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'<GraduationYear" +
-                            ">\' successfully", country, university, title, degree), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then(string.Format("The display error popup message \'{0}\' will come out", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Editing of the Seller Profile Education with records")]
+        [NUnit.Framework.DescriptionAttribute("4. Editing of the Seller Profile Education with records")]
         [NUnit.Framework.CategoryAttribute("editEducation")]
-        [NUnit.Framework.TestCaseAttribute("Singapore", "SMU", "B.Tech", "Software Testing", "2020", "Education has been added", null)]
-        public virtual void EditingOfTheSellerProfileEducationWithRecords(string country, string university, string title, string degree, string graduationYear, string message, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("SMU", "Singapore", "B.Tech", "Software Testing", "2021", "Education as been updated", null)]
+        public virtual void _4_EditingOfTheSellerProfileEducationWithRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "editEducation"};
@@ -283,13 +280,13 @@ this.ScenarioInitialize(scenarioInfo);
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Country", country);
-            argumentsOfScenario.Add("University", university);
+            argumentsOfScenario.Add("UniversityName", universityName);
+            argumentsOfScenario.Add("CountryUniversity", countryUniversity);
             argumentsOfScenario.Add("Title", title);
             argumentsOfScenario.Add("Degree", degree);
             argumentsOfScenario.Add("GraduationYear", graduationYear);
             argumentsOfScenario.Add("Message", message);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Editing of the Seller Profile Education with records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Editing of the Seller Profile Education with records", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -311,34 +308,44 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 49
- testRunner.Given("I login to the Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I login to the Trade Skills portal for education successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 50
- testRunner.And("I click on the pen icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I navigate to the skiils page under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 51
- testRunner.When(string.Format("edit the data in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' and click on Add button", country, university, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click on the Education pen icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 52
- testRunner.Then(string.Format("The new row should be updated as \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' successfully", country, university, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("I edit the records in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' and click on Add button", universityName, countryUniversity, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 53
- testRunner.And(string.Format("The display popup message \'{0}\' will appear", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("The display prompt message \'{0}\' will shown", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 54
+ testRunner.Then(string.Format("The new row should be updated in \'{0}\', \'{1}\', \'{2}\', \'{3}\', \'{4}\' successfully", universityName, countryUniversity, title, degree, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Deleting of the Seller Profile Education")]
+        [NUnit.Framework.DescriptionAttribute("5. Deleting of the Seller Profile Education")]
         [NUnit.Framework.CategoryAttribute("deleteEducation")]
-        public virtual void DeletingOfTheSellerProfileEducation()
+        [NUnit.Framework.TestCaseAttribute("Education entry successfully removed", null)]
+        public virtual void _5_DeletingOfTheSellerProfileEducation(string message, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "deleteEducation"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting of the Seller Profile Education", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 60
+            argumentsOfScenario.Add("Message", message);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Deleting of the Seller Profile Education", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 61
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -358,16 +365,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 61
- testRunner.Given("I login to the Trade Skills portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 62
- testRunner.And("I choose the education", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I login to the Trade Skills portal for education successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 63
- testRunner.When("I click on the delete icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I navigate to the skiils page under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 64
+ testRunner.And("I click on delete icon under Education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 65
+ testRunner.When(string.Format("The prompt message of the \'{0}\' will be shown", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 66
  testRunner.Then("the Education should have the deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

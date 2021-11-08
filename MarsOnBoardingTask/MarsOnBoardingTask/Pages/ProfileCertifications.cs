@@ -189,6 +189,5 @@ namespace MarsOnBoardingTask.Pages
             IWebElement year2 = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[3]"));
             return year2.Text;
         }
-
     }
 }

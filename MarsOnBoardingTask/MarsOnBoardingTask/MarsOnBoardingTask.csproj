@@ -23,9 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Utils\" />
-    <Folder Include="Pages\" />
     <Folder Include="SpecFlow\Feature\" />
-    <Folder Include="SpecFlow\StepDefinition\" />
   </ItemGroup>
 
 </Project>

@@ -15,7 +15,7 @@ namespace MarsOnBoardingTask.SpecFlow.Feature
         // Home Page object initialization and definition
         HomePage NaviHomePageObj = new HomePage();
 
-        // Profile Language Page object initialization and definition
+        // Profile Certications Page object initialization and definition
         ProfileCertifications profileCertsObj = new ProfileCertifications();
 
         [Given(@"I login to the Trade Skills portal for Certs successfully")]
@@ -47,6 +47,7 @@ namespace MarsOnBoardingTask.SpecFlow.Feature
         [Then(@"The error popup message '(.*)' will shown")]
         public void ThenTheErrorPopupMessageWillShown(string Message)
         {
+            // Assertion that error popup message record has been displayed.
             Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, "Please enter Certification Name, Certification From and Certification Year");
         }
 
