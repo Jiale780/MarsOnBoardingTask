@@ -2,7 +2,6 @@
 using MarsOnBoardingTask.Utils;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
-using System;
 using TechTalk.SpecFlow;
 
 namespace MarsOnBoardingTask.SpecFlow.StepDefinition
