@@ -4,7 +4,7 @@ using System;
 
 namespace MarsOnBoardingTask.Pages
 {
-    class LoginPage
+    public class LoginPage
     {
         public void GoToHomePage(IWebDriver testDriver)
         {

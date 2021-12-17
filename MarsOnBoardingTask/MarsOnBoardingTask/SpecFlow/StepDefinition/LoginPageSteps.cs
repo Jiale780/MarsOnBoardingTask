@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 namespace MarsOnBoardingTask.SpecFlow.StepDefinitions
 {
     [Binding]
-    public class LoginPageSteps : Hooks
+    public class LoginPageSteps : CommonDriver
     {
         // Login Page object initialization and definition
         LoginPage loginPageObj = new LoginPage();

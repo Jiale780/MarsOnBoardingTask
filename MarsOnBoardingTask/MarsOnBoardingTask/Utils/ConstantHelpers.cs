@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace MarsOnBoardingTask.Utils
 {
@@ -11,7 +12,11 @@ namespace MarsOnBoardingTask.Utils
         public static string ScreenshotPath = "@/MarsOnBoardingTask/TestReports/Screenshots/";
 
         //ExtentReportsPath
-        public static string ReportsPath = "@/MarsOnBoardingTask/TestReports/Reports";
+        //public static string ReportsPath = "@/MarsOnBoardingTask/TestReports/Reports";
+        public static string ReportsPath = Directory.GetParent(@"@/MarsOnBoardingTask/TestReports/Reports").FullName
+            + Path.DirectorySeparatorChar + "Screenshot"
+            + Path.DirectorySeparatorChar + "Screenshot_" + DateTime.Now.ToString("ddMMyyyy HHmmss")
+            + Path.DirectorySeparatorChar;
 
         //ReportXML Path
         public static string ReportXMLPath = "";

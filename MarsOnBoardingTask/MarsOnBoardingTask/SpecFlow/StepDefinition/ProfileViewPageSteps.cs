@@ -7,7 +7,7 @@ using TechTalk.SpecFlow;
 namespace MarsOnBoardingTask.SpecFlow.StepDefinitions
 {
     [Binding]
-    public class ProfileViewPageSteps : Hooks
+    public class ProfileViewPageSteps : CommonDriver
     {
         // Profile View object initialization and definition
         ProfileViewPage ProfileViewPageObj = new ProfileViewPage();

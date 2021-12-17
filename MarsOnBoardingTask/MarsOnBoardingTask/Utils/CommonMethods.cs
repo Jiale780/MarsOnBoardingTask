@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Text;
-using MarsOnBoardingTask.Utils;
+using System.Collections.Generic;
 
 namespace MarsQA_1.Helpers
 {
@@ -9,19 +9,18 @@ namespace MarsQA_1.Helpers
     {
         //Screenshots
         //Screenshot
-
         public class SaveScreenShotClass
         {
-            public static string SaveScreenshot(IWebDriver driver, string ScreenShotFileName) // Definition
+            public static string SaveScreenshot(IWebDriver driver, string folderLocation, string ScreenShotFileName) // Definition
             {
-                var folderLocation = (ConstantHelpers.ScreenshotPath);
-
                 if (!System.IO.Directory.Exists(folderLocation))
                 {
                     System.IO.Directory.CreateDirectory(folderLocation);
                 }
 
+                // By capturing the ScreenShot
                 var screenShot = ((ITakesScreenshot)driver).GetScreenshot();
+                // To create the file path
                 var fileName = new StringBuilder(folderLocation);
 
                 fileName.Append(ScreenShotFileName);
