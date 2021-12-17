@@ -23,7 +23,7 @@ namespace MarsOnBoardingTask.Utils
         }
 
         [AfterScenario]
-        public static void AfterScenario()
+        public void AfterScenario()
         {
             testDriver.Quit();
         }
